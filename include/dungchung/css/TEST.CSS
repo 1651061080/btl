@@ -1,0 +1,18 @@
+body {
+    padding-top: 50px;
+    padding-bottom: 0px;
+    margin: 0px;
+}
+.navbar-form:before, .navbar-form:after {
+    display: table;
+    content: "";
+    line-height: 0;
+}
+/* khung chủ đề div class banner-holder*/
+.banner-holder {
+    background:rgb(66, 224, 245) url() no-repeat bottom center;
+    height: 283px;
+}
+.span1_5{
+    padding: 20px;
+}
