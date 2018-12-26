@@ -1,34 +1,5 @@
 <?php
- 
 require './thanhvien.php';
- 
-// Nếu người dùng submit form
-if (!empty($_POST['add_thanhvien']))
-{
-    // Lay data
-    $data['username']        = isset($_POST['name']) ? $_POST['name'] : '';
-    $data['email']         = isset($_POST['email']) ? $_POST['email'] : '';
-    $data['level']    = isset($_POST['level']) ? $_POST['level'] : '';
-     
-    // Validate thong tin
-    $errors = array();
-    if (empty($data['username'])){
-        $errors['username'] = 'Chưa nhập tên sinh vien';
-    }
-     
-    if (empty($data['email'])){
-        $errors['email'] = 'Chưa nhập giới tính sinh vien';
-    }
-     
-    // Neu ko co loi thi insert
-    if (!$errors){
-        add_thanhvien($data['username'], $data['email'], $data['level']);
-        // Trở về trang danh sách
-        header("location: danhsachthanhvien.php");
-    }
-}
- 
-disconnect_db();
 ?>
  
 <!DOCTYPE html>
@@ -40,8 +11,9 @@ disconnect_db();
     </head>
     <body>
         <h1>Thêm thanh vien </h1>
+        <script src="../include/dungchung/jquey/jquery-3.2.1.min.js"></script>
         <a href="danhsachthanhvien.php">Trở về</a> <br/> <br/>
-        <form method="post" action="student-add.php">
+        <form method="post" action="themthanhvien.php">
             <table width="50%" border="1" cellspacing="0" cellpadding="10">
                 <tr>
                     <td>Name</td>
@@ -65,12 +37,48 @@ disconnect_db();
                     <td>level</td>
                     <td>
                         <input type="text" name="level" value="<?php echo !empty($data['level']) ? $data['level'] : ''; ?>"/>
+                        <?php if (!empty($errors['level'])) echo $errors['level']; ?>
+                    </td>
                     </td>
                 </tr>
                 <tr>
                     <td></td>
                     <td>
-                        <input type="submit" name="add_thanhvien" value="Lưu"/>
+                        <input type="submit" name="add" value="Lưu"
+                        <?php
+ 
+
+ 
+// Nếu người dùng submit form
+if (isset($_POST['add']))
+{
+    // Lay data
+    $data['username']   = isset($_POST['name']) ? $_POST['name'] : '';
+    $data['email']     = isset($_POST['email']) ? $_POST['email'] : '';
+    $data['level']    = isset($_POST['level']) ? $_POST['level'] : '';
+     
+    // Validate thong tin
+    $errors = array();
+    if (empty($data['username'])){
+        $errors['username'] = 'Chưa nhập tên sinh vien';
+    }
+     
+    if (empty($data['email'])){
+        $errors['email'] = 'Chưa nhập email';
+    }
+
+    // Neu ko co loi thi insert
+    if (!$errors){
+      add_thanhvien($data['username'], $data['email'], $data['level']);
+      // Trở về trang danh sách
+      header("location: danhsachthanhvien.php");
+  }
+  
+}
+ 
+disconnect_db();
+?>
+/>
                     </td>
                 </tr>
             </table>

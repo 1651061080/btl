@@ -27,9 +27,7 @@ function disconnect_db()
         mysqli_close($conn);
     }
 }
- 
-// Hàm lấy tất cả sinh viên
-function get_all_thanhviens()
+function get_allcauhoi()
 {
     // Gọi tới biến toàn cục $conn
     global $conn;
@@ -38,7 +36,7 @@ function get_all_thanhviens()
     connect_db();
      
     // Câu truy vấn lấy tất cả sinh viên
-    $sql = "select * from members";
+    $sql = "select * from cauhoi";
      
     // Thực hiện câu truy vấn
     $query = mysqli_query($conn, $sql);
@@ -56,11 +54,8 @@ function get_all_thanhviens()
     // Trả kết quả về
     return $result;
 }
-// tất cả  cau hoi
-
- 
-// Hàm lấy sinh viên theo ID
-function get_thanhvien($thanhvien_id)
+// cau hoi
+function get_cauhoi($id)
 {
     // Gọi tới biến toàn cục $conn
     global $conn;
@@ -69,7 +64,7 @@ function get_thanhvien($thanhvien_id)
     connect_db();
      
     // Câu truy vấn lấy tất cả sinh viên
-    $sql = "select * from members where memberID={$thanhvien_id}";
+    $sql = "select * from cauhoi where id={$id}";
      
     // Thực hiện câu truy vấn
     $query = mysqli_query($conn, $sql);
@@ -86,10 +81,8 @@ function get_thanhvien($thanhvien_id)
     // Trả kết quả về
     return $result;
 }
-
- 
-// Hàm thêm sinh viên
-function add_thanhvien($thanhvien_name, $thanhvien_email, $thanhvien_level)
+// hàm thêm câu hỏi
+function add_cauhoi($cauhoi_chude, $cauhoi_ten, $cauhoi_a,$cauhoi_b,$cauhoi_dapan)
 {
     // Gọi tới biến toàn cục $conn
     global $conn;
@@ -98,24 +91,26 @@ function add_thanhvien($thanhvien_name, $thanhvien_email, $thanhvien_level)
     connect_db();
      
     // Chống SQL Injection
-    $thanhvien_name = addslashes($thanhvien_name);
-    $thanhvien_email = addslashes($thanhvien_email);
-    $thanhvien_level = addslashes($thanhvien_level);
+    $cauhoi_chude = addslashes($cauhoi_chude);
+    $cauhoi_ten = addslashes($cauhoi_ten);
+    $cauhoi_a = addslashes($cauhoi_a);
+    $cauhoi_b = addslashes($cauhoi_b);
+    $cauhoi_dapan = addslashes($cauhoi_dapan);
+  
      
     // Câu truy vấn thêm
     $sql = "
-            INSERT INTO members(username, email, level) VALUES
-            ('$thanhvien_name','$thanhvien_email','$thanhvien_level')
+            INSERT INTO cauhoi(chude, cauhoi, a,b,dapan) VALUES
+            ('$cauhoi_chude','$cauhoi_ten','$cauhoi_a','$cauhoi_b','$cauhoi_dapan')
     ";
      
     // Thực hiện câu truy vấn
     $query = mysqli_query($conn, $sql);
      
     return $query;
-}
- 
-// Hàm sửa sinh viên
-function edit_thanhvien($thanhvien_id,$thanhvien_name, $thanhvien_email, $thanhvien_level)
+} 
+// Hàm sửa cauhoi
+function edit_cauhoi($id,$cauhoi_chude, $cauhoi_ten, $cauhoi_a,$cauhoi_b,$cauhoi_dapan)
 {
     // Gọi tới biến toàn cục $conn
     global $conn;
@@ -124,18 +119,22 @@ function edit_thanhvien($thanhvien_id,$thanhvien_name, $thanhvien_email, $thanhv
     connect_db();
      
     // Chống SQL Injection
-    $thanhvien_name       = addslashes($thanhvien_name);
-    $thanhvien_email        = addslashes($thanhvien_email);
-    $thanhvien_level   = addslashes($thanhvien_level);
-    $thanhvien_id   =addslashes($thanhvien_id);
+    $cauhoi_chude = addslashes($cauhoi_chude);
+    $cauhoi_ten = addslashes($cauhoi_ten);
+    $cauhoi_a = addslashes($cauhoi_a);
+    $cauhoi_b = addslashes($cauhoi_b);
+    $cauhoi_dapam = addslashes($cauhoi_dapan);
+    $id   =addslashes($id);
      
     // Câu truy sửa
     $sql = "
-            UPDATE members SET
-            username = '$thanhvien_name',
-            email = '$thanhvien_email',
-            level = '$thanhvien_level'
-            WHERE memberID=$thanhvien_id
+            UPDATE cauhoi SET
+            chude = '$cauhoi_chude',
+            cauhoi = '$cauhoi_ten',
+            a = '$cauhoi_a',
+            b = '$cauhoi_b',
+            dapan ='$cauhoi_dapan'
+            WHERE id=$id
     ";
      
     // Thực hiện câu truy vấn
@@ -143,10 +142,7 @@ function edit_thanhvien($thanhvien_id,$thanhvien_name, $thanhvien_email, $thanhv
      
     return $query;
 }
- 
- 
-// Hàm xóa sinh viên
-function delete_thanhvien($thanhvien_id)
+function delete_cauhoi($id)
 {
     // Gọi tới biến toàn cục $conn
     global $conn;
@@ -156,8 +152,8 @@ function delete_thanhvien($thanhvien_id)
      
     // Câu truy sửa
     $sql = "
-            DELETE FROM members
-            WHERE memberID =$thanhvien_id
+            DELETE FROM cauhoi
+            WHERE id =$id
     ";
      
     // Thực hiện câu truy vấn

@@ -19,7 +19,9 @@ if(isset($_POST['submit'])){
 	} else {
 		$stmt = $db->prepare('SELECT username FROM members WHERE username = :username');
 		$stmt->execute(array(':username' => $username));
+	
 		$row = $stmt->fetch(PDO::FETCH_ASSOC);
+
 
 		if(!empty($row['username'])){
 			$error[] = 'Username provided is already in use.';
@@ -80,7 +82,7 @@ if(isset($_POST['submit'])){
 			$to = $_POST['email'];
 			$subject = "Registration Confirmation";
 			$body = "<p>Thank you for registering at demo site.</p>
-			<p>To activate your account, please click on this link: <a href='".DIR."activate.php?x=$id&y=$activasion'>".DIR."activate.php?x=$id&y=$activasion</a></p>
+			<p>To activate your account, please click on this link: <a href='http://localhost/cSE485_NO65943/SOURCES/login/activate.php?x=$id&y=$activasion'>nhanvaoday</a></p>
 			<p>Regards Site Admin</p>";
 
 			$mail = new Mail();

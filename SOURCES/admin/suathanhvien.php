@@ -1,5 +1,4 @@
 <?php
- 
 require './thanhvien.php';
  session_start();
 // Lấy thông tin hiển thị lên để người dùng sửa
@@ -14,7 +13,7 @@ if (!$data){
 }
  
 // Nếu người dùng submit form
-if (!empty($_POST['edit_thanhvien']))
+if (isset($_POST['edit_thanhvien']))
 {
     // Lay data
     $data['username']        = isset($_POST['name']) ? $_POST['name'] : '';
@@ -32,7 +31,7 @@ if (!empty($_POST['edit_thanhvien']))
         $errors['email'] = 'Chưa nhập giới tính sinh vien';
     }
      
-    // Neu ko co loi thi insert
+    // Neu ko co loi thi update
     if (!$errors){
         edit_thanhvien($data['memberID'], $data['username'], $data['email'], $data['level']);
         // Trở về trang danh sách
@@ -54,7 +53,7 @@ disconnect_db();
     <body>
         <h1>Sửa sinh vien </h1>
         <a href="danhsachthanhvien.php">Trở về</a> <br/> <br/>
-        <form method="post" action="danhsachthanhvien.php?id=<?php echo $data['memberID']; ?>">
+        <form method="post" action="suathanhvien.php?id=<?php echo $data['memberID']; ?>">
             <table width="50%" border="1" cellspacing="0" cellpadding="10">
                 <tr>
                     <td>Name</td>

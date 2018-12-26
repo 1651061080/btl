@@ -4,7 +4,6 @@
 if( $user->is_logged_in() ){ header('Location: memberpage.php'); exit(); }
 
 $resetToken = hash('SHA256', ($_GET['key']));
-
 $stmt = $db->prepare('SELECT resetToken, resetComplete FROM members WHERE resetToken = :token');
 $stmt->execute(array(':token' => $resetToken));
 $row = $stmt->fetch(PDO::FETCH_ASSOC);
@@ -95,14 +94,14 @@ require('layout/header.php');
 					}
 
 					//check the action
-					switch ($_GET['action']) {
-						case 'active':
-							echo "<h2 class='bg-success'>Your account is now active you may now log in.</h2>";
-							break;
-						case 'reset':
-							echo "<h2 class='bg-success'>Please check your inbox for a reset link.</h2>";
-							break;
-					}
+					// switch ($_GET['action']) {
+					// 	case 'active':
+					// 		echo "<h2 class='bg-success'>Your account is now active you may now log in.</h2>";
+					// 		break;
+					// 	case 'reset':
+					// 		echo "<h2 class='bg-success'>Please check your inbox for a reset link.</h2>";
+					// 		break;
+					// }
 					?>
 
 					<div class="row">

@@ -20,6 +20,7 @@ if(isset($_POST['submit'])){
 
 		if($user->login($username,$password)){
 			$_SESSION['username'] = $username;
+		
 			header('Location: memberpage.php');
 			exit;
 
@@ -79,6 +80,8 @@ require('layout/header.php');
 
 				
 				?>
+	
+		
 
 				<div class="form-group">
 					<input type="text" name="username" id="username" class="form-control input-lg" placeholder="User Name" value="<?php if(isset($error)){ echo htmlspecialchars($_POST['username'], ENT_QUOTES); } ?>" tabindex="1">

@@ -50,7 +50,7 @@ if(isset($_POST['submit'])){
 			$subject = "Password Reset";
 			$body = "<p>Someone requested that the password be reset.</p>
 			<p>If this was a mistake, just ignore this email and nothing will happen.</p>
-			<p>To reset your password, visit the following address: <a href='".DIR."activate.php?x=$id&y=$activasion'>".DIR."resetPassword.php?x=$id&y=$activasion</a></p>";
+			<p>To reset your password, visit the following address:  <a href='http://localhost/cSE485_NO65943/SOURCES/login/resetPassword.php?key=$token'>nhan vao day</a></p>";
 
 			$mail = new Mail();
 			$mail->setFrom(SITEEMAIL);

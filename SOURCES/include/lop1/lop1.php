@@ -11,13 +11,13 @@
     <title>Học toán với HOCTOT.COM</title>
     <link rel="stylesheet" href="./dungchung/css/TEST.CSS">
     <script async="" src="./Học toán với OnlineMath - Online Math_files/analytics.js.download"></script>
-    <script type="text/javascript" src="./dungchung/js/jquery.js.download"></script>
-    <script type="text/javascript" src="./dungchung/js/jquery.bxslider.min.js.download"></script>
+    <script type="text/javascript" src="../dungchung/js/jquery.js.download"></script>
+    <script type="text/javascript" src="../dungchung/js/jquery.bxslider.min.js.download"></script>
     <script src="./dungchung/js/bootstrap.min.js.download"></script>
-    <link rel="stylesheet" type="text/css" href="./dungchung/css/grade_new.css">
-    <link rel="stylesheet" type="text/css" href="./dungchung/css/jquery.bxslider.css">
+    <link rel="stylesheet" type="text/css" href="../dungchung/css/grade_new.css">
+    <link rel="stylesheet" type="text/css" href="../dungchung/css/jquery.bxslider.css">
     <link rel="stylesheet" type="text/css" href="../dungchung/css/home.css">
-    <link rel="stylesheet" type="text/css" href="./dungchung/css/page.css">
+    <link rel="stylesheet" type="text/css" href="../dungchung/css/page.css">
 
 
 
