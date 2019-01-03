@@ -1,5 +1,6 @@
 <?php
 require './thanhvien.php';
+include('../dungchung/header.php')
 ?>
  
 <!DOCTYPE html>
@@ -10,11 +11,11 @@ require './thanhvien.php';
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
-        <h1>Thêm thanh vien </h1>
-        <script src="../include/dungchung/jquey/jquery-3.2.1.min.js"></script>
+    <center><h1 style=" border: 1px solid blue;">Thêm thanh vien </h1>
+        <script src="../../include/dungchung/jquey/jquery-3.2.1.min.js"></script>
         <a href="danhsachthanhvien.php">Trở về</a> <br/> <br/>
         <form method="post" action="themthanhvien.php">
-            <table width="50%" border="1" cellspacing="0" cellpadding="10">
+            <table width="50%" border="1" cellspacing="0" cellpadding="10" style=" background-color : yellow;">
                 <tr>
                     <td>Name</td>
                     <td>
@@ -84,4 +85,7 @@ disconnect_db();
             </table>
         </form>
     </body>
+    <?php
+include('../dungchung/footer.php');
+?>
 </html>

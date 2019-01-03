@@ -1,5 +1,6 @@
 <?php
 require './cauhoi.php';
+include('../dungchung/header.php')
  session_start();
 // Lấy thông tin hiển thị lên để người dùng sửa
 $id = isset($_GET['id']) ? (int)$_GET['id'] : '';
@@ -62,10 +63,10 @@ disconnect_db();
         <script src="../include/dungchung/jquey/jquery-3.2.1.min.js"></script>
     </head>
     <body>
-        <h1>Sửa sinh vien </h1>
+    <center><h1 style=" border: 1px solid blue;" >Sửa sinh vien </h1>
         <a href="danhsachcauhoi.php">Trở về</a> <br/> <br/>
         <form method="post" action="suacauhoi.php?id=<?php echo $data['id']; ?>">
-            <table width="50%" border="1" cellspacing="0" cellpadding="10">
+            <table width="50%" border="1" cellspacing="0" cellpadding="10" style=" background-color : yellow;">
                 <tr>
                     <td>chu đề</td>
                     <td>
@@ -121,4 +122,7 @@ disconnect_db();
             </table>
         </form>
     </body>
+    <?php
+include('../dungchung/footer.php');
+?>
 </html>

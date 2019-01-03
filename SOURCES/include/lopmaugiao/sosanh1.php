@@ -85,7 +85,7 @@ include('./header.php');
        
     
         $stt=1;
-        $sql= "select cauhoi.id,cauhoi.cauhoi,phuongan.a,phuongan.b from cauhoi,phuongan where (cauhoi.id=phuongan.id and cauhoi.chude='sosanh')   ORDER BY RAND() LIMIT 1";
+        $sql= "select cauhoi.id,cauhoi.cauhoi,phuongann.a,phuongann.b from cauhoi,phuongann where (cauhoi.id=phuongann.id and cauhoi.chude='sosanh1')   ORDER BY RAND() LIMIT 1";
         $result=mysqli_query($conn,$sql);
         while($row=mysqli_fetch_object($result)){
             echo "Câu ".$stt.':'.$row->cauhoi.'</br>';
@@ -97,8 +97,8 @@ include('./header.php');
         <?php
             $stt++; } ?>
             <button class="btn btn-danger btn-large" name="ook" title="Làm xong và nộp bài" id="btn-done"><b class="icon icon-white icon-ok"></b>  Nộp bài !</button>
-        <!-- <div id="score" style="text-align: center;">
-            <div class="score-label grad-pink">Điểm</div>
+        <div id="score" style="text-align: center;">
+            <!-- <div class="score-label grad-pink">Điểm</div>
             
                 <h2><?php  echo($luot);?></h2>
             </div> -->

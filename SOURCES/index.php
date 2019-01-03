@@ -59,7 +59,7 @@ session_start();
 						<br class="clear">
 					</div>
 				</div>
-				<form class="hidden-desktop home-form" action="https://olm.vn/?g=user.login" method="post">
+				<!-- <form class="hidden-desktop home-form" action="" method="post">
 					<input type="text" name="username" placeholder="Tên đăng nhập Online Math">
 					<input type="password" id="password" name="password" placeholder="Mật khẩu">
 					<div class="text-center">
@@ -77,7 +77,7 @@ session_start();
 					</div>
 					<input type="hidden" name="logintask" value="1">
 					<input type="hidden" name="return" value="https%3A%2F%2Folm.vn%2F">
-				</form>
+				</form> -->
 			</div>
 		</div>
 	</div>
@@ -88,17 +88,17 @@ session_start();
 					 href="">Luyện tập môn Toán</a></h2>
 			</div>
 			<div class="row grade-row1">
-				<div class="span1_5"><a href="./include/lopmaugiao.php" title="Luyện toán mẫu giáo" class="grade grad-pink"><span class="grade-lop">Mẫu
+				<div class="span1_5"><a href="./include/lopmaugiao/lopmaugiao.php" title="Luyện toán mẫu giáo" class="grade grad-pink"><span class="grade-lop">Mẫu
 							giáo</span><span class="grade-number">0</span></a></div>
-				<div class="span1_5"><a href="./include/lop1.php" title="Toán lớp 1" class="grade grad-green"><span class="grade-lop">Toán
+				<div class="span1_5"><a href="./include/lop1/lop1.php" title="Toán lớp 1" class="grade grad-green"><span class="grade-lop">Toán
 							lớp</span><span class="grade-number">1</span></a></div>
-				<div class="span1_5"><a href="./include/lop2.html" title="Toán lớp 2" class="grade grad-red"><span class="grade-lop">Toán
+				<div class="span1_5"><a href="./include/lop2/lop2.php" title="Toán lớp 2" class="grade grad-red"><span class="grade-lop">Toán
 							lớp</span><span class="grade-number">2</span></a></div>
-				<div class="span1_5"><a href="./include/lop3.html" title="Toán lớp 3" class="grade grad-orange"><span class="grade-lop">Toán
+				<div class="span1_5"><a href="./include/lop3/lop3.php" title="Toán lớp 3" class="grade grad-orange"><span class="grade-lop">Toán
 							lớp</span><span class="grade-number">3</span></a></div>
-				<div class="span1_5"><a href="./include/lop4.html" title="Toán lớp 4" class="grade grad-blue"><span class="grade-lop">Toán
+				<div class="span1_5"><a href="./include/lop4/lop4.php" title="Toán lớp 4" class="grade grad-blue"><span class="grade-lop">Toán
 							lớp</span><span class="grade-number">4</span></a></div>
-				<div class="span1_5"><a href="./include/lop5.html" title="Toán lớp 4" class="grade grad-blue"><span class="grade-lop">Toán
+				<div class="span1_5"><a href="./include/lop4/lop4.php" title="Toán lớp 4" class="grade grad-blue"><span class="grade-lop">Toán
 							lớp</span><span class="grade-number">5</span></a></div>
 			</div>
 		</div>

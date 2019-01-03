@@ -19,8 +19,9 @@ if(isset($_POST['submit'])){
 		$password = $_POST['password'];
 
 		if($user->login($username,$password)){
+			
 			$_SESSION['username'] = $username;
-		
+	
 			header('Location: memberpage.php');
 			exit;
 
@@ -90,7 +91,6 @@ require('layout/header.php');
 				<div class="form-group">
 					<input type="password" name="password" id="password" class="form-control input-lg" placeholder="Mật Khẩu" tabindex="3">
 				</div>
-				
 				<div class="row">
 					<div class="col-xs-9 col-sm-9 col-md-9">
 						 <a href='reset.php'>Forgot your Password?</a>

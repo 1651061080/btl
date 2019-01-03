@@ -25,7 +25,7 @@
     <title>HOCTOT.COM</title>
 </head>
 <?php
-include('./header.php');
+include('./dungchung/header.php');
 
 ?>
 
@@ -48,16 +48,16 @@ include('./header.php');
 <div id="question" style="font-size: 22px"  name="question">
             <?php 
 
-             include("../../admin/cauhoi/cauhoi.php");
-             if (!$conn){
+            //  include("../../admin/cauhoi.php");
+            
                 $conn = mysqli_connect('localhost', 'root', '', 'thien') or die ('Can\'t not connect to database');
                 // Thiết lập font chữ kết nối
                mysqli_set_charset($conn, 'utf8');
-            }
-           $luot=0;
+            
+
             // <h2><p style="text-align:center;color:red;">Đề thi toán</p></h2>
          if(isset($_POST['ook'])){
-             $luot++;
+
             $arr =$_POST;
             $dung=0;
             $sai=0;
@@ -65,7 +65,7 @@ include('./header.php');
         foreach($arr as $key=>$value){
             if(is_numeric($key))
             {
-            $sql2="select cauhoi.dapan from cauhoi where id= {$key} limit 1";
+            $sql2="select lop2.dapan from lop2 where id= {$key} limit 1";
             $result1=mysqli_query($conn,$sql2);
             $dapan=mysqli_fetch_object($result1);
             if($value==$dapan->dapan){
@@ -85,7 +85,7 @@ include('./header.php');
        
     
         $stt=1;
-        $sql= "select cauhoi.id,cauhoi.cauhoi,phuongan.a,phuongan.b from cauhoi,phuongan where (cauhoi.id=phuongan.id and cauhoi.chude='sosanh')   ORDER BY RAND() LIMIT 1";
+        $sql= "select lop2.id,lop2.cauhoi,lop2.a,lop2.b from lop2   ORDER BY RAND() LIMIT 1";
         $result=mysqli_query($conn,$sql);
         while($row=mysqli_fetch_object($result)){
             echo "Câu ".$stt.':'.$row->cauhoi.'</br>';
@@ -97,8 +97,8 @@ include('./header.php');
         <?php
             $stt++; } ?>
             <button class="btn btn-danger btn-large" name="ook" title="Làm xong và nộp bài" id="btn-done"><b class="icon icon-white icon-ok"></b>  Nộp bài !</button>
-        <!-- <div id="score" style="text-align: center;">
-            <div class="score-label grad-pink">Điểm</div>
+        <div id="score" style="text-align: center;">
+            <!-- <div class="score-label grad-pink">Điểm</div>
             
                 <h2><?php  echo($luot);?></h2>
             </div> -->

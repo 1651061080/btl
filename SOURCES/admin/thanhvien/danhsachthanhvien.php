@@ -1,5 +1,6 @@
 <?php
 require './thanhvien.php';
+include('../dungchung/header.php');
 $thanhviens = get_all_thanhviens();
 disconnect_db();
 ?>
@@ -12,9 +13,9 @@ disconnect_db();
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
-        <h1>Danh sách sinh vien</h1>
+    <center><h1 style=" border: 1px solid blue;">Danh sách sinh vien</h1>
         <a href="./themthanhvien.php">Thêm sinh viên</a> <br/> <br/>
-        <table width="100%" border="1" cellspacing="0" cellpadding="10">
+        <table width="100%" border="1" cellspacing="0" cellpadding="10"style=" background-color : yellow;">
             <tr>
                 <td>ID</td>
                 <td>ten</td>
@@ -39,4 +40,7 @@ disconnect_db();
             <?php } ?>
         </table>
     </body>
+    <?php
+include('../dungchung/footer.php');
+?>
 </html>

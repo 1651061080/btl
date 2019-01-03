@@ -25,7 +25,7 @@
     <title>HOCTOT.COM</title>
 </head>
 <?php
-include('./header.php');
+include('../header.php');
 
 ?>
 
@@ -85,7 +85,7 @@ include('./header.php');
        
     
         $stt=1;
-        $sql= "select cauhoi.id,cauhoi.cauhoi,phuongan.a,phuongan.b from cauhoi,phuongan where (cauhoi.id=phuongan.id and cauhoi.chude='sosanh')   ORDER BY RAND() LIMIT 1";
+        $sql= "select cauhoi.id,cauhoi.cauhoi,phuongan.a,phuongan.b from cauhoi,phuongan where (cauhoi.id=phuongan.id and cauhoi.chude='daingan')   ORDER BY RAND() LIMIT 1";
         $result=mysqli_query($conn,$sql);
         while($row=mysqli_fetch_object($result)){
             echo "Câu ".$stt.':'.$row->cauhoi.'</br>';

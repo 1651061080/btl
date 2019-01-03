@@ -97,8 +97,8 @@ include('./header.php');
         <?php
             $stt++; } ?>
             <button class="btn btn-danger btn-large" name="ook" title="Làm xong và nộp bài" id="btn-done"><b class="icon icon-white icon-ok"></b>  Nộp bài !</button>
-        <!-- <div id="score" style="text-align: center;">
-            <div class="score-label grad-pink">Điểm</div>
+        <div id="score" style="text-align: center;">
+            <!-- <div class="score-label grad-pink">Điểm</div>
             
                 <h2><?php  echo($luot);?></h2>
             </div> -->

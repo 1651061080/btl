@@ -36,7 +36,7 @@ function get_allcauhoi()
     connect_db();
      
     // Câu truy vấn lấy tất cả sinh viên
-    $sql = "select * from cauhoi";
+    $sql = "select * from lop2";
      
     // Thực hiện câu truy vấn
     $query = mysqli_query($conn, $sql);
@@ -64,7 +64,7 @@ function get_cauhoi($id)
     connect_db();
      
     // Câu truy vấn lấy tất cả sinh viên
-    $sql = "select * from cauhoi where id={$id}";
+    $sql = "select * from lop2 where id={$id}";
      
     // Thực hiện câu truy vấn
     $query = mysqli_query($conn, $sql);
@@ -82,7 +82,7 @@ function get_cauhoi($id)
     return $result;
 }
 // hàm thêm câu hỏi
-function add_cauhoi($cauhoi_chude, $cauhoi_ten, $cauhoi_a,$cauhoi_b,$cauhoi_dapan)
+function add_cauhoi($cauhoi_chude, $cauhoi_ten, $cauhoi_dapan,$cauhoi_a,$cauhoi_b)
 {
     // Gọi tới biến toàn cục $conn
     global $conn;
@@ -100,8 +100,8 @@ function add_cauhoi($cauhoi_chude, $cauhoi_ten, $cauhoi_a,$cauhoi_b,$cauhoi_dapa
      
     // Câu truy vấn thêm
     $sql = "
-            INSERT INTO cauhoi(chude, cauhoi, a,b,dapan) VALUES
-            ('$cauhoi_chude','$cauhoi_ten','$cauhoi_a','$cauhoi_b','$cauhoi_dapan')
+            INSERT INTO lop2(chude, cauhoi,dapan, a,b) VALUES
+            ('$cauhoi_chude','$cauhoi_ten','$cauhoi_dapan','$cauhoi_a','$cauhoi_b')
     ";
      
     // Thực hiện câu truy vấn
@@ -110,7 +110,7 @@ function add_cauhoi($cauhoi_chude, $cauhoi_ten, $cauhoi_a,$cauhoi_b,$cauhoi_dapa
     return $query;
 } 
 // Hàm sửa cauhoi
-function edit_cauhoi($id,$cauhoi_chude, $cauhoi_ten, $cauhoi_a,$cauhoi_b,$cauhoi_dapan)
+function edit_cauhoi($id,$cauhoi_chude, $cauhoi_ten,$cauhoi_dapan, $cauhoi_a,$cauhoi_b)
 {
     // Gọi tới biến toàn cục $conn
     global $conn;
@@ -128,7 +128,7 @@ function edit_cauhoi($id,$cauhoi_chude, $cauhoi_ten, $cauhoi_a,$cauhoi_b,$cauhoi
      
     // Câu truy sửa
     $sql = "
-            UPDATE cauhoi SET
+            UPDATE lop2 SET
             chude = '$cauhoi_chude',
             cauhoi = '$cauhoi_ten',
             a = '$cauhoi_a',
@@ -152,7 +152,7 @@ function delete_cauhoi($id)
      
     // Câu truy sửa
     $sql = "
-            DELETE FROM cauhoi
+            DELETE FROM lop2
             WHERE id =$id
     ";
      
