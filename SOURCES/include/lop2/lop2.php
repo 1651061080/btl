@@ -19,7 +19,7 @@ include('./dungchung/header.php');
                                 <strong>
                                     <a style="color: #f60;" class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1"
                                         href="">
-                                        Bài kiểm tra lớp 3 </a>
+                                        Bài kiểm tra lớp 2 </a>
                                 </strong>
                             </div>
                             <div id="collapseTwo" class="accordion-body">

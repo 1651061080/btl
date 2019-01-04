@@ -22,9 +22,10 @@
                 <div class="col-sm-6 col-md-4 item"><a href="./cauhoi/danhsachcauhoi.php"><img class="img-fluid" src="../include/dungchung/img/cauhoi.jpg" /></a>
                     <h3 class="name">question management</h3>
                     <p class="description">quản lí câu hỏi</p><a href="./cauhoi/danhsachcauhoi.php" class="action"><i class="fa fa-arrow-circle-right"></i></a></div>
-                <div class="col-sm-6 col-md-4 item"><a href="#"><img class="img-fluid" src="../include/dungchung/img/khoahoc.jpg" /></a>
+                <div class="col-sm-6 col-md-4 item"><a href="./the/danhsachthe.php"><img class="img-fluid" src="../include/dungchung/img/the.jpg"  width="200px" height="230px"/></a>
                     <h3 class="name">course management</h3>
-                    <p class="description">quản lí khóa học</p><a href="#" class="action"><i class="fa fa-arrow-circle-right"></i></a></div>
+                    <p class="description">quản lí thẻ</p><a href="#" class="action"><i class="fa fa-arrow-circle-right"></i></a>
+                </div>
             </div>
         </div>
     </div>

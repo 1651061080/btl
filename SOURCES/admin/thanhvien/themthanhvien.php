@@ -1,6 +1,6 @@
 <?php
-require './thanhvien.php';
-include('../dungchung/header.php')
+require ('./thanhvien.php');
+include('../dungchung/header.php');
 ?>
  
 <!DOCTYPE html>

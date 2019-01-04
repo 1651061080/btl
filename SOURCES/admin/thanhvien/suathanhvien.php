@@ -1,7 +1,6 @@
 <?php
 require './thanhvien.php';
-include('../dungchung/header.php')
- session_start();
+include('../dungchung/header.php');
 // Lấy thông tin hiển thị lên để người dùng sửa
 $id = isset($_GET['id']) ? (int)$_GET['id'] : '';
 if ($id){

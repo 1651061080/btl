@@ -4,7 +4,7 @@
         <div class="row">
             <div class="span2 visible-desktop">
                 <ul class="list">
-                    <li item-id="678" class="top mn-item  "><a href="../toanmaugiao/toanmaugiao.php">Toán mẫu giáo <b class="icon-chevron-right"></b></a></li>
+                    <li item-id="678" class="top mn-item  "><a href="../lopmaugiao/lopmaugiao.php">Toán mẫu giáo <b class="icon-chevron-right"></b></a></li>
                     <li item-id="673" class="mn-item"><a href="../lop1/lop1.php">Toán lớp 1 <b class="icon-chevron-right"></b></a></li>
                     <li item-id="674" class="mn-item"><a href="../lop2/lop2.php">Toán lớp 2 <b class="icon-chevron-right"></b></a></li>
                     <li item-id="675" class="mn-item "><a href="../lop3/lop3.php">Toán lớp 3 <b class="icon-chevron-right"></b></a></li>
@@ -18,7 +18,7 @@
                                 <strong>
                                     <a style="color: #f60;" class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1"
                                         href="">
-                                        Bài kiểm tra lớp 3 </a>
+                                        Bài kiểm tra lớp 4 </a>
                                 </strong>
                             </div>
                             <div id="collapseTwo" class="accordion-body">

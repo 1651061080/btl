@@ -1,7 +1,7 @@
 
 <?php
-include('./header.php');
-include('../admin/the/the.php');
+include('../dungchung/header.php');
+include('./the.php');
 ?>
 <div id="main-content">
 		<h1 style="text-align: center;">Đăng ký mua thẻ học</h1>
@@ -91,7 +91,7 @@ include('../admin/the/the.php');
     // Neu ko co loi thi insert
     if (!$errors){
 	  add_the($data['name'], $data['mobile'], $data['address'], $data['number']);
-	  echo('<h1>Đăng ki thành công</h1>');
+	  header("location: danhsachthe.php");
   }
   
 }
@@ -103,4 +103,7 @@ disconnect_db();
                 </tr>
             </table>
         </form>
+		<?php
+include('../dungchung/footer.php');
+?>
     </body>
