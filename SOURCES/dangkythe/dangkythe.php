@@ -7,7 +7,7 @@ include('../admin/the/the.php');
 		<h1 style="text-align: center;">Đăng ký mua thẻ học</h1>
 		<div id="info" style="font-size: 18px;line-height: 30px;">
 						<p>
-			OLM phát hành thẻ cào mệnh giá 200.000đ tương ứng với thời hạn VIP 1 năm. Bạn hãy điền đầy đủ thông tin bên dưới, OLM sẽ giao thẻ và thanh toán tại nhà cho bạn. Bạn sẽ nhận thẻ và thanh toán cho người giao thẻ sau vài ngày tùy theo khoảng cách từ Hà Nội đến địa chỉ giao thẻ.
+			OLM phát hành thẻ cào mệnh giá 200.000đ tương ứng với thời hạn VIP 1 năm. Bạn hãy điền đầy đủ thông tin bên dưới, HOCTOT sẽ giao thẻ và thanh toán tại nhà cho bạn. Bạn sẽ nhận thẻ và thanh toán cho người giao thẻ sau vài ngày tùy theo khoảng cách từ Hà Nội đến địa chỉ giao thẻ.
 			</p>
 			<p>
 			Một tài khoản VIP có thể thực hành không giới hạn các môn Toán, Tiếng Việt ở tất cả các lớp.	

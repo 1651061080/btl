@@ -30,20 +30,7 @@ include('./header.php');
 ?>
 
 <form method="post" id = "form" action="sosanh.php">
-<div class="bc bc-math" style="margin-bottom: 10px;">
-		<span class="bc-item bc-first">
-			<a href="">
-				<img src="" class="bc-logo">Luyện tập
-			</a> 
-		</span>
-		<span class="bc-item"><a href="o">Lớp mẫu giáo</a></span>		<span class="bc-item">
-			<b>
-				<a href="">Cao - thấp 
-				</a> 
-			</b> 
-		</span> 
-	</div>
- 
+
 
 <div id="question" style="font-size: 22px"  name="question">
             <?php 

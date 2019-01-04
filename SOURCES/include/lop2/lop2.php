@@ -25,7 +25,7 @@ include('./dungchung/header.php');
                             <div id="collapseTwo" class="accordion-body">
                                 <div class="accordion-inner">
                                     <ul style="margin-left: 5px; font-size: 18px; list-style: none;">
-                                        <li><a href="">Kiểm
+                                        <li><a href="../../kiemtra">Kiểm
                                                 tra
                                                 tháng 4 </a></li>
                                         <li><a href="l">Kiểm

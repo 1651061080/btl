@@ -33,9 +33,9 @@
 						<li class="mn-item" item-id="1"><a href="../../INDEX.PHP"><IMG   src="../dungchung/IMG/logo1.png" width="150PX" height="150PX"></a>
 						</li>
 						<li class="mn-item" item-id="2"><a href="../../index.php">LUYỆN TẬP</a></li>
-						<li class="mn-item" item-id="3"><a href="../hocbai.php">HỌC BÀI</a></li>
+						<li class="mn-item" item-id="3"><a href="../../hocbai.php">HỌC BÀI</a></li>
 						<li class="mn-item" item-id="4"><a href="">HỎI ĐÁP</a></li>
-						<li class="mn-item" item-id="5"><a href="../kiemtra.php">KIỂM TRA</a></li>
+						<li class="mn-item" item-id="5"><a href="../../kiemtra/index.php">KIỂM TRA</a></li>
 						<li class="mn-item hidden-desktop" item-id="6"><a href="">THÔNG TIN</a></li>
 						<li class="mn-item hidden-desktop" item-id="7"><a href="">ĐĂNG KÝ MUA THẺ</a></li>
 					</ul>
